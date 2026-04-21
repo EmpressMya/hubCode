@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUNAR Studio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">LUNAR Studio</div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="voices.html">Voices</a>
+        <a href="content.html">Content</a>
+        <a href="the-demo.html">The Demo</a>
+      </div>
+    </nav>
+    <div class="voicesPast">
+      <h1>Voices of the Past</h1>
+      <p>
+        Listen to the voices of the past, learn a bit more about the main
+        character of the game through these audio tapes!
+      </p>
+      <p>Make sure to come here daily to see more voices added!</p>
+      <div class="voices">
+        <div class="voice">
+          <h2>Audio Log 5</h2>
+          <audio controls>
+            <source src="audio/Track_1.wav" type="audio/wav" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="voice">
+          <h2>Audio Log 6</h2>
+          <audio controls>
+            <source src="audio/Track_3.wav" type="audio/wav" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="voice">
+          <h2>Audio Log 7</h2>
+          <audio controls>
+            <source src="audio/Track_2.wav" type="audio/wav" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="voice">
+          <h2>Audio Log 10</h2>
+          <audio controls>
+            <source src="audio/Track_4.wav" type="audio/wav" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="voice">
+          <h2>Audio Log ??</h2>
+          <audio controls>
+            <source src="audio/Track_5.wav" type="audio/wav" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="voice">
+          <h2>Audio Log ???</h2>
+          <audio controls>
+            <source src="audio/Track_6.wav" type="audio/wav" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="voice">
+          <h2>Experiment Log 6</h2>
+          <audio controls>
+            <source src="audio/Track_7.wav" type="audio/wav" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="voice">
+          <h2>Experiment Log 7</h2>
+          <audio controls>
+            <source src="audio/Track_8.wav" type="audio/wav" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="spoiler">
+          <img
+            src="images/SPRITE_PORTRAIT.png"
+            alt="Sprite character"
+            class="sprite-portrait"
+            id="sprite-image"
+          />
+          <div class="speech-bubble" id="spoiler-bubble">
+            <h1>
+              WARNING: Continue on your own risk, the next stuff contains
+              spoilers! Wait how am I talking I can't-
+            </h1>
+          </div>
+        </div>
+        <div class="Svoice">
+          <h2>Experiment Log 8</h2>
+          <audio controls>
+            <source src="audio/Spoiler_Track_1.wav" type="audio/wav" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="Svoice">
+          <h2>Experiment Log 9</h2>
+          <audio controls>
+            <source src="audio/Spoiler_Track_2.wav" type="audio/wav" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="Svoice">
+          <h2>Experiment Log 5 *NEW*</h2>
+          <audio controls>
+            <source src="audio/Spoiler_Track_3.wav" type="audio/wav" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("spoiler-bubble")
+        .addEventListener("click", function () {
+          // Change message
+          const h1 = this.querySelector("h1");
+          h1.textContent = "Don't say I didn't warn you.";
+
+          // Change image to static noise
+          const spriteImage = document.getElementById("sprite-image");
+          spriteImage.src = "images/402107790_STATIC_NOISE_400.gif";
+          spriteImage.alt = "Static noise";
+
+          // Reveal spoiler voices
+          const spoilerVoices = document.querySelectorAll(".Svoice");
+          spoilerVoices.forEach((voice) => {
+            voice.classList.add("revealed");
+          });
+
+          // Change page to forbidden scheme
+          document.body.classList.add("spoiler-revealed");
+        });
+    </script>
+  </body>
+</html>
