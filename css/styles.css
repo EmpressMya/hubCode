@@ -259,3 +259,23 @@ body.spoiler-revealed #spoiler-bubble::after {
   color: red;
   min-height: 100vh;
 }
+
+#secret-content {
+  display: none;
+  text-align: center;
+  padding: 100px 20px;
+  color: red;
+}
+
+#secret-content.revealed {
+  display: block;
+}
+
+#secret-trigger {
+  color: red;
+  opacity: 0.6;
+}
+
+#secret-trigger:hover {
+  text-shadow: 0 0 10px red;
+}
